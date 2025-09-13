@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model tb_atasan {
+  id      Int       @id @default(autoincrement())
+  atasan  String    @db.VarChar(50)
+  email   String    @db.VarChar(50)
+  reports tb_report[]
+}
+
+model tb_perusahaan {
+  id         Int        @id @default(autoincrement())
+  perusahaan String     @db.VarChar(50)
+}
+
+model tb_report {
+  id              Int     @id @default(autoincrement())
+  tanggal         Int     @default(0) 
+  nama            String  @db.Text
+  dapartemen      String  @db.VarChar(50)    
+  email           String  @db.VarChar(50)
+  atasanId        Int 
+  atasan          tb_atasan  @relation(fields: [atasanId], references: [id])
+  lokasi          String  @db.VarChar(50)
+  perusahaan      String  @db.VarChar(50)
+  barang          String  @db.VarChar(50) 
+  model           String  @db.VarChar(50) 
+  quantity        Int     @default(0)
+  satuan          String  @db.VarChar(50) 
+  keterangan      String  @db.VarChar(50)
+  status          String  @db.VarChar(50) 
+  approveby       String  @db.VarChar(50)
+}
