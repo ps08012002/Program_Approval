@@ -5,14 +5,15 @@ const prisma = new PrismaClient();
 async function main() {
   await prisma.tb_atasan.createMany({
     data: [
-      { atasan: "CA", email: "ps08012002@gmail.com" },
-      { atasan: "FAT", email: "ps08012002@gmail.com" },
-      { atasan: "HR", email: "ps08012002@gmail.com" },
-      { atasan: "CC", email: "ps08012002@gmail.com" },
-      { atasan: "QC", email: "ps08012002@gmail.com" },
-      { atasan: "QA", email: "ps08012002@gmail.com" },
-      { atasan: "LOGISTIK", email: "ps08012002@gmail.com" },
-      { atasan: "PRODUKSI", email: "ps08012002@gmail.com" },
+      //Ganti email dengan email penerima notif
+      { atasan: "CA", email: "Email CA" },
+      { atasan: "FAT", email: "Email FAT" },
+      { atasan: "HR", email: "Email HR" },
+      { atasan: "CC", email: "Email CC" },
+      { atasan: "QC", email: "Email QC" },
+      { atasan: "QA", email: "Email QA" },
+      { atasan: "LOGISTIK", email: "Email LOGISTIK" },
+      { atasan: "PRODUKSI", email: "Email PRODUKSI" },
     ],
   });
 

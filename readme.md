@@ -1,8 +1,8 @@
 ## 📋 Softaware Yang Diperlukan
 
 - **GIT** : Untuk melacak perubahan pada file dalam projek.
-- **NVM**: Untuk node verison manager.
-- **Mysql**: Untuk database.
+- **NVM** : Untuk node verison manager.
+- **Mysql** : Untuk database.
 
 ## 🏁 Getting Started
 
@@ -13,19 +13,6 @@
 
 ```bash
     git --version
-```
-
-- Konfigurasi GIT via cmd dengan command :
-
-```bash
-    git config --global user.name "Username github"
-    git config --global user.email email github
-```
-
-- Cek konfigurasi GIT via cmd dengan command :
-
-```bash
-    git config --list
 ```
 
 ### 2. Instalasi NVM
@@ -46,7 +33,7 @@
 - Gunakan versi NodeJS via cmd as **Administrator** dengan command :
 
 ```bash
-    npm use 22.16.0
+    npm use lts
 ```
 
 - Cek instalasi NodeJS via cmd as **Administrator** dengan command :
@@ -62,13 +49,13 @@
 - Clone repository dengan command :
 
 ```bash
-    git clone https://github.com/ps08012002/Program_Stock.git
+    git clone https://github.com/ps08012002/Program_Approval.git
 ```
 
 - Masuk kedalam folder projek dengan command :
 
 ```bash
-    cd Program_Stock\backend
+    cd Program_Approval
 ```
 
 - Install NodeJS dengan command :
@@ -77,32 +64,41 @@
     npm install
 ```
 
-- Install Prisma dengan command :
-
-```bash
-    npx prisma@latest init --db
-```
-
 ### 3. Create Database
 
 - Download dan instal MYSQL : <br>https://dev.mysql.com/downloads/file/?id=541637
-- Rename file didalam **/backend/.env.example** menjadi **.env**
+- Rename file didalam **/Backend/.env.example** menjadi **.env**
 
 ```bash
     Server Configuration For .env
+
     Username      = root (default)
     Password      = Your Password
     Server        = localhost (default)
     Port          = 3306 (default)
     Nama_Database = Your Database Name
+
+    EMAIL         = Email For Send Notification
+    PASS          = APP Password For Your Email
 ```
+
+### 3. Setup Email
+
+- Masuk ke **/Backend/prisma/seed.mjs**
+- Rubah isi file sesuai dengan arahan
 
 ## 🚀 Starting Program
 
-- Untuk pengguna WINDOWS saat pertama kalai menjalankan ketikkan command :
+- Saat pertama kali start program jalankan dengan command :
+
+```bash
+    first.bat
+```
+
+- Untuk menjalankan program secara normal gunakan command :
 
 ```bash
     start.bat
 ```
 
-### Built with ❤️ by Kelompoke Arek Arek
+### Built with ❤️ by Mr_UwaaW
